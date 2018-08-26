@@ -1,0 +1,216 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.0 (14/7/16)
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+% Command for printing skill overview bubbles
+\newcommand\skills{ 
+~
+	\smartdiagram[bubble diagram]{
+        \textbf{Software}\\\textbf{Science},
+        \textbf{~~~OOP~~~~},
+	    \textbf{Web}\\\textbf{~~~~~~Dev~~~~~~},
+        \textbf{~Graphs~},
+        \textbf{~Security~},
+        \textbf{~~~Logic~~~},
+		\textbf{Set Theory}
+    }
+}
+
+% Programming skill bars
+\programming{ % PHP, Java, Python, LaTeX, HTML5, JS, GML, MySQL, OpenGL
+	{C~\textbullet~R~\textbullet~ Arduino ~\textbullet~ OpenGL / 1},
+    {JS ~\textbullet~ {\large\LaTeX} ~\textbullet~ MySQL  ~\textbullet~ Python / 3},
+    {PHP ~\textbullet~ HTML5 ~\textbullet~ Java ~\textbullet~ GML / 6}}
+
+% Projects text
+\projects{
+		\textbf{\href{https://github.com/Addono/lisa}{Lisa}} -  
+		A web application to track transactions in an informal group. \emph{\#PHP \#JS \#MySQL \#HTML5} \\
+		\textbf{\href{https://github.com/akbokha/fhttp}{fhttp}} - 
+		A user friendly tool for employing man-in-the-middle attacks. \emph{\#Python} \\
+        \textbf{\href{https://github.com/Addono/EV3-Sorting-Machine}{EV3 Sorting Machine}} - 
+        A design based learning project in building a robot which sorts colored balls, developed with the V-Model software development process. \emph{\#leJos \#Java \#LaTeX} \\
+        \textbf{\href{https://github.com/Addono/Simple-logbook}{LaTeX Logbook Manager}} - 
+        A \LaTeX~ package offering a simple way to track, display and present the time you spend. \emph{\#LaTeX}
+}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\cvname{Adriaan Knapen} % Your name
+\cvjobtitle{Software Engineer} % Job
+% title/career
+
+\cvlinkedin{/in/adriaan-knapen}
+\cvgithub{Addono}
+\cvnumberphone{+31 6 404 10001} % Phone number
+\cvsite{aknapen.nl} % Personal website
+\cvmail{a.d.knapen@protonmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+    	{Sep 2018 - }
+        {Present}
+        {Master Cloud Computing \& Services}
+        {\href{https://aalto.fi/}{Aalto University}}
+        {Espoo, Finland}
+        {}
+    \\
+    \twentyitem
+    	{Sep 2015 - }
+        {Jun 2018}
+        {Bachelor Software Science}
+        {\href{https://www.tue.nl/}{Eindhoven University of Technology}}
+        {Eindhoven, The Netherlands}
+        {
+       	\begin{itemize}
+   			\item Achieved Cum Laude for the propaedeutic program.
+            \item Finished the \href{https://educationguide.tue.nl/programs/bachelor-college/use-learning-trajectory/technology-entrepreneurship/}{Technology Entrepreneurship USE trajectory}.
+		\end{itemize}
+    	}
+    \\
+	\twentyitem
+    	{Jul 2017}
+		{}
+        {Peking University Summer School International}
+        {\href{http://www.oir.pku.edu.cn/summerschool/}{Peking University}}
+        {Beijing, China}
+        {
+    	}
+    \\
+    \twentyitem
+	    {Sep 2008 -}
+	    {Jul 2015}
+	    {Pre-University Education (VWO)}
+	    {\href{http://www.amersfoortseberg.nl/}{OSG De Amersfoortse Berg}}
+	    {Amersfoort, The Netherlands}
+	    {
+	    }
+	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
+\end{twenty}
+
+%\section{Publications}
+%L. Antonie, H. Gadgil, G. Grewal, and K. Inwood, “Historical Data Integration - A Study of WWI Canadian Soldiers,” in 2016 IEEE 16th International Conference on Data Mining Workshops (ICDMW), pp. 186-193, IEEE, 2016. \vspace{2mm}
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+\begin{twenty} % Environment for a list with descriptions
+\twentyitem
+    	{Dec 2016 -}
+		{Present}
+        {Junior Software Developer}
+		{\href{http://triptic.nl}{triptic}}
+        {Eindhoven, The Netherlands}
+        {\begin{itemize}
+        \item Part of the Core Development Team doing work on improving, extending, and securing \href{https://www.irisintranet.com/}{Iris Intranet}.
+        \end{itemize}}
+        \\
+	\twentyitem
+    	{Dec 2013 -}
+		{Dec 2016}
+		{Content manager \& Programmer}
+		{\href{http://www.vilans.nl/}{Vilans}}
+        {Utrecht, The Netherlands}
+        {}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 EXTRACURRICULAR ACTIVITY
+%----------------------------------------------------------------------------------------
+
+\section{Extracurricular Activity}
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+	{Oct 2017 -}
+	{Jan 2018}
+	{Ambassador}
+	{\href{https://nahss.nl}{Netherlands-Asia Honours Summer School}}
+	{The Netherlands}
+	{}
+	\\
+	\twentyitem
+	{Feb 2017 -}
+	{Sep 2017}
+	{Participant \& Consultant}
+	{\href{https://nahss.nl}{Netherlands-Asia Honours Summer School}}
+	{The Netherlands \& Beijing, China}
+	{
+		\begin{itemize}
+			\item Performed a consulstancy group project for Trouw Nutrition (part of SHV~Holdings) on the reduction of Antibiotic Growth Promoters in the feed additives industry.
+			\item Multiple workshops related to groupwork, self development, and Chinese business culture.
+		\end{itemize}
+	}
+	\\
+	\twentyitem
+	{Aug 2015 -}
+	{Present}
+	{Scouts Leader}
+	{\href{http://impeesa.nl/}{Scouting Impeesa}}
+	{Amersfoort, The Netherlands}
+	{
+		\begin{itemize}
+			\item Weekly organizing an afternoon filling program for a group of boy scouts aged between 12 and 15.
+			\item Organizing multiple weekend and summer camps each year.
+		\end{itemize}
+	}
+	\\
+	\twentyitem
+	{2013}
+	{}
+	{Pupil}
+	{\href{https://u-talent.nl/}{U-Talent}}
+	{Utrecht, The Netherlands}
+	{
+		\begin{itemize}
+			\item Attended the ``U-Talent dagen'' at Utrecht University.
+		\end{itemize}
+	}
+	\\
+	\twentyitem
+	{2013}
+	{}
+	{Programmer \& Graphical Designer}
+	{Creative Game Challenge}
+	{Utrecht, The Netherlands}
+	{
+		\begin{itemize}
+			\item Finished in the last phase as a finalist.
+		\end{itemize}
+	}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+\end{document} 
