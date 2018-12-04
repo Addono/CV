@@ -130,7 +130,7 @@
 
 \newlength\imagewidth
 \newlength\imagescale
-\pgfmathsetlength{\imagewidth}{5cm}
+\pgfmathsetlength{\imagewidth}{4cm}
 \pgfmathsetlength{\imagescale}{\imagewidth/600}
 
 \newcommand{\profilesection}[2]{\vspace{8pt}{\color{black!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt}}}
@@ -155,7 +155,7 @@
 \newcommand\programming[1]{ 
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
-        	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3} \: $10k+$ \: LOC$};
+        	\node [above right] at (0, 4) {$0~~~\: \arrow{3.2} \:~~~240+ \: $hours};
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
 				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
@@ -180,12 +180,12 @@
   \end{tikzpicture}
 
   %------------------------------------------------
-
+    
   \begin{textblock}{6}(0.5, 0.2)
 
     %------------------------------------------------
     
-        \vspace{4mm}
+        \vspace{2mm}
     {\Huge\color{pblue}\cvname}
     
     \vspace{2mm}
@@ -193,10 +193,16 @@
     %------------------------------------------------
     
     {\Large\color{black!80}\cvjobtitle}
+    
+    % \hspace{1cm}
+    % \begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+    % \clip (600/2, 567/2) circle (567/2);
+    %         \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{\profilepic}};
+    % \end{tikzpicture}
 
     %------------------------------------------------
     
-    \vspace{4mm}
+    \vspace{2mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
@@ -213,7 +219,7 @@
               \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
               \end{array}
               $} 
-            & \href{http://\cvsite}{\cvsite} \\}
+            & \href{https://\cvsite}{\cvsite} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
@@ -240,10 +246,10 @@
     \end{tabular}
 
     %------------------------------------------------
-    \vspace{4mm}
-    \profilesection{Skills}{4cm}
+    % \vspace{4mm}
+    \profilesection{Skills}{3cm}
     
-    {\large \textbf{Overview}}
+    % {\large \textbf{Overview}}
 
 	\skills
         
@@ -251,7 +257,7 @@
         
         \vspace{3mm}
        
-	 {\large \textbf{Programming}} 
+% 	 {\large \textbf{Programming}} 
 
 		 \programming
          

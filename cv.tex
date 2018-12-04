@@ -18,6 +18,7 @@
 
 \documentclass[letterpaper]{twentysecondcv} % a4paper for A4
 
+
 % Command for printing skill overview bubbles
 \newcommand\skills{ 
 ~
@@ -33,15 +34,16 @@
 
 % Programming skill bars
 \programming{ % PHP, Java, Python, LaTeX, HTML5, JS, GML, MySQL, OpenGL
-	{C~\textbullet~R~\textbullet~ Arduino ~\textbullet~ OpenGL ~\textbullet~ Scala / 1.3},
+	{C~\textbullet~R~\textbullet~ Arduino \textbullet ~OpenGL \textbullet ~Scala \textbullet~Go / 1.3},
     {JS ~\textbullet~ {\large\LaTeX} ~\textbullet~ MySQL ~\textbullet~ Django / 3},
     {PHP ~\textbullet~ HTML5 ~\textbullet~ Java ~\textbullet~ Python / 6}}
 
 % Projects text
 \projects{
+        \textbf{\href{https://aknapen.nl/masga}{MAke Sauna Great Again}} - A simple user interface aggregating sensor data from one of Vaisala's saunas. Made during Junction 2018. \emph{\#python \#Google Cloud Functions \#JS} \\
         \textbf{\href{https://foodathon-solutionsmarket.com}{Foodathon Solutions Market}} - The \\e-conference platform powering \\ Foodathon's Solutions Market. \emph{\#Python \#Django \#CICD \#PostgreSQL} \\
 		\textbf{\href{https://github.com/Addono/lisa}{Lisa}} -  
-		A web application to track transactions in an informal group. \emph{\#PHP \#JS \#MySQL \#HTML5} \\
+		A web application to track expenses within a group of friends. \emph{\#PHP \#JS \#MySQL \#HTML5} \\
 		\textbf{\href{https://github.com/akbokha/fhttp}{fhttp}} - 
 		A user friendly tool for employing man-in-the-middle attacks. \emph{\#Python} \\
         \textbf{\href{https://github.com/Addono/Simple-logbook}{LaTeX Logbook Manager}} - 
@@ -61,7 +63,8 @@
 \cvgithub{Addono}
 \cvnumberphone{+31 6 404 10001} % Phone number
 \cvsite{aknapen.nl} % Personal website
-\cvmail{a.d.knapen@protonmail.com} % Email address
+\cvmail{mail@aknapen.nl} % Email address
+% \profilepic{img/headphones-cropped.png}
 
 %----------------------------------------------------------------------------------------
 
@@ -97,7 +100,7 @@
         {
        	\begin{itemize}
    			\item Attained the bachelor's degree Cum Laude.
-            \item Finished the \href{https://educationguide.tue.nl/programs/bachelor-college/use-learning-trajectory/technology-entrepreneurship/}{Technology Entrepreneurship USE trajectory}.
+            \item Finished the \href{https://web.archive.org/web/20181111084550/https://educationguide.tue.nl/programs/bachelor-college/use-learning-trajectory/technology-entrepreneurship/}{Technology Entrepreneurship USE trajectory}.
 		\end{itemize}
     	}
     \\
@@ -137,7 +140,9 @@
 		{\href{https://wur.nl}{Wageningen University and Research}}
         {Wageningen, The Netherlands}
         {
-        Designed, developed and hosted the e-conference platform \href{https://foodathon-solutionsmarket.com/}{Foodathon Solutions Market} for the SGD Conference.
+        \begin{itemize}
+			\item Designed, developed and hosted the e-conference platform \href{https://foodathon-solutionsmarket.com/}{Foodathon Solutions Market} for the SGD Conference.
+        \end{itemize}
         }
         \\
     \twentyitem
@@ -146,9 +151,11 @@
         {Junior Software Developer}
 		{\href{http://triptic.nl}{triptic}}
         {Eindhoven, The Netherlands}
-        {\begin{itemize}
-        \item Part of the Core Development Team doing work on improving, extending, and securing \href{https://www.irisintranet.com/}{Iris Intranet}.
-        \end{itemize}}
+        {
+        \begin{itemize}
+            \item Part of the Core Development Team doing work on improving, extending, and securing \href{https://www.irisintranet.com/}{Iris Intranet}.
+        \end{itemize}
+        }
         \\
 	\twentyitem
     	{Dec 2013 -}
@@ -166,6 +173,18 @@
 
 \section{Extracurricular Activity}
 \begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+	{Nov 2018}
+	{}
+	{Hacker}
+	{\href{https://2018.hackjunction.com/}{Junction 2018}}
+	{Espoo, Finland}
+	{
+	\begin{itemize}
+			\item Winner of Vaisala's ``Hack the Sauna'' challenge.
+	\end{itemize}
+	}
+	\\
 	\twentyitem
 	{Oct 2017 -}
 	{Jan 2018}
@@ -189,7 +208,7 @@
 	\\
 	\twentyitem
 	{Aug 2015 -}
-	{Present}
+	{Jul 2018}
 	{Scouts Leader}
 	{\href{http://impeesa.nl/}{Scouting Impeesa}}
 	{Amersfoort, The Netherlands}
@@ -207,17 +226,17 @@
 % 		\end{itemize}
 % 	}
 % 	\\
-	\twentyitem
-	{2013}
-	{}
-	{Programmer \& Graphical Designer}
-	{Creative Game Challenge}
-	{Utrecht, The Netherlands}
-	{
-		\begin{itemize}
-			\item Finished in the last phase as a finalist.
-		\end{itemize}
-	}
+% 	\twentyitem
+% 	{2013}
+% 	{}
+% 	{Programmer \& Graphical Designer}
+% 	{Creative Game Challenge}
+% 	{Utrecht, The Netherlands}
+% 	{
+% 		\begin{itemize}
+% 			\item Finished in the last phase as a finalist.
+% 		\end{itemize}
+% 	}
 	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
 
