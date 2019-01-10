@@ -18,7 +18,8 @@ compile:
 
 publish:
   stage: pages
-  dependencies: build
+  dependencies: 
+    - build
   script:
     - mkdir public
     - mv cv.pdf public
