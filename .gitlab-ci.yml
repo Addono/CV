@@ -1,0 +1,29 @@
+# This file is a template, and might need editing before it works on your project.
+# use docker image with latex preinstalled
+# since there is no official latex image, use https://github.com/blang/latex-docker
+# possible alternative: https://github.com/natlownes/docker-latex
+image: blang/latex
+
+stages:
+ - build
+ - pages
+
+compile:
+  stage: build
+  script:
+    - latexmk -pdf cv.tex
+  artifacts:
+    paths:
+      - "*.pdf"
+
+publish:
+  stage: pages
+  dependencies: build
+  script:
+    - mkdir public
+    - mv cv.pdf public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
