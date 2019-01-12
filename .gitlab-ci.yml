@@ -11,7 +11,7 @@ stages:
 compile:
   stage: build
   script:
-    - latexmk -pdf cv.tex
+    - latexmk -pdflatex=xelatex -pdf cv.tex
   artifacts:
     paths:
       - "*.pdf"
