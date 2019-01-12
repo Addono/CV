@@ -6,7 +6,7 @@ image: alpine
 
 stages:
  - build
- - pages
+ - publish
 
 compile:
   stage: build
@@ -17,8 +17,8 @@ compile:
     paths:
       - "*.pdf"
 
-publish:
-  stage: pages
+pages:
+  stage: publish
   dependencies: 
     - compile
   script:
