@@ -133,7 +133,7 @@
 \pgfmathsetlength{\imagewidth}{4cm}
 \pgfmathsetlength{\imagescale}{\imagewidth/600}
 
-\newcommand{\profilesection}[2]{\vspace{8pt}{\color{black!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt}}}
+\newcommand{\profilesection}[2]{\vspace{0pt}{\color{black!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt}}}
 
 % Define custom commands for CV info
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
@@ -202,7 +202,7 @@
 
     %------------------------------------------------
     
-    \vspace{2mm}
+    \vspace{0mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
@@ -287,19 +287,19 @@
 
 
 \renewcommand{\section}[1]{
-  \par\vspace{\parskip}
+  \par\vspace{0\parskip}
 	{%
 		\LARGE\headingfont\color{headercolor}%
 		\@sectioncolor #1%
 	}
-  \par\vspace{\parskip}
+  \par\vspace{0\parskip}
 }
 
 \renewcommand{\subsection}[1]{
-	\par\vspace{.5\parskip}{%
+	\par\vspace{-4\parskip}{%
 		\Large\headingfont\color{headercolor} #1%
 	}
-	\par\vspace{.25\parskip}%
+	\par\vspace{-1\parskip}%
 }
 
 \pagestyle{empty}
