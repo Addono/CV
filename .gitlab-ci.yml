@@ -16,7 +16,7 @@ compile:
   script:
     - lsb_release --all
     - latex --version
-    - xelatex cv.tex
+    - latexmk -pdf -xelatex cv.tex"
   artifacts:
     paths:
       - ./cv.pdf
