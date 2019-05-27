@@ -8,7 +8,7 @@ stages:
  - build
  - publish
 
-make_texlive2018:
+compile:
   image: raabf/latex-versions:texlive2018
   stage: build
   tags:
