@@ -12,7 +12,7 @@ compile:
   script:
     - lsb_release --all
     - latex --version
-    - latexmk -pdf -xelatex cv.tex"
+    - latexmk -pdf -xelatex cv.tex
   artifacts:
     paths:
       - ./cv.pdf
