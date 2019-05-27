@@ -8,11 +8,13 @@ stages:
  - build
  - publish
 
-compile:
+make_texlive2018:
+  image: raabf/latex-versions:texlive2018
   stage: build
-  image: blang/latex:ctanfull
+  tags:
+    - docker
   script:
-    - latexmk -pdflatex=xelatex -pdf cv.tex
+    - make all
   artifacts:
     paths:
       - "*.pdf"
