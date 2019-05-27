@@ -245,7 +245,7 @@
             }
         \ifthenelse{\equal{\cvgitlab}{}}{}{
             {$
-              \begin{array}{c}
+              \begin{array}{l}
               \hspace{2mm} \huge \textnormal{\faGitlab}
               \end{array}
               $} & \href{https://gitlab.com/\cvgitlab}{\cvgitlab} \\
