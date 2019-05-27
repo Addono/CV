@@ -10,7 +10,7 @@ stages:
 
 compile:
   stage: build
-  image: blang/latex
+  image: blang/latex:ctanfull
   script:
     - latexmk -pdflatex=xelatex -pdf cv.tex
   artifacts:
