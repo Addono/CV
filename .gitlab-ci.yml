@@ -16,7 +16,7 @@ compile:
   script:
     - lsb_release --all
     - latex --version
-    - dockertex xelatex cv.tex
+    - xelatex cv.tex
   artifacts:
     paths:
       - ./cv.pdf
