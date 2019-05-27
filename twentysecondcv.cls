@@ -139,6 +139,7 @@
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
+\newcommand{\cvgitlab}[1]{\renewcommand{\cvgitlab}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
@@ -208,7 +209,7 @@
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
       		{$
               \begin{array}{l}
-              \hspace{4mm} \Huge \textnormal{\faMobile} 
+              \hspace{3.8mm} \Huge \textnormal{\faMobile} 
               \end{array}
               $} 
             & \cvnumberphone\\}
@@ -216,14 +217,14 @@
       \ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
+              \hspace{2.5mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
               \end{array}
               $} 
             & \href{https://\cvsite}{\cvsite} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
+              \hspace{2.2mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
               \end{array}
               $} 
             & \href{mailto:\cvmail}{\cvmail} \\}
@@ -231,16 +232,23 @@
        \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
+              \hspace{2.5mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
               \end{array}
-              $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
+              $} & \href{https://linkedin.com\cvlinkedin}{\cvlinkedin} \\
             }  
         \ifthenelse{\equal{\cvgithub}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{3mm} \huge \textnormal{\faGithub}
+              \hspace{2.5mm} \huge \textnormal{\faGithub}
               \end{array}
-              $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
+              $} & \href{https://github.com/\cvgithub}{\cvgithub} \\
+            }
+        \ifthenelse{\equal{\cvgitlab}{}}{}{
+            {$
+              \begin{array}{c}
+              \hspace{2mm} \huge \textnormal{\faGitlab}
+              \end{array}
+              $} & \href{https://gitlab.com/\cvgitlab}{\cvgitlab} \\
             }   
             
     \end{tabular}
@@ -334,7 +342,7 @@
 		{\footnotesize#4}%
         }\\%
     #2&\parbox[t]{0.83\textwidth}{%
-		\ifblank{#5}{}{#5 \\}
+		\ifblank{#5}{}{#5 \vspace{5pt}}
 		#6%
 	}\\
 }
@@ -362,7 +370,7 @@
 %	 MARGINS AND LINKS
 %----------------------------------------------------------------------------------------
 
-\RequirePackage[left=7.6cm,top=0.1cm,right=1cm,bottom=0.1cm,nohead,nofoot]{geometry}
+\RequirePackage[left=7.6cm,top=0.1cm,right=1cm,bottom=-2cm,nohead,nofoot]{geometry}
 
 
 \usepackage{smartdiagram}
