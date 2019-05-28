@@ -34,7 +34,7 @@
     pdfauthor={},
     pdfsubject={},
     pdfkeywords={},
-    colorlinks=false,           % no lik border color
+    colorlinks=false,           % no link border color
     allbordercolors=white       % white border color for all
 }
 
