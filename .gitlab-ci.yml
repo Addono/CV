@@ -22,7 +22,6 @@ pages:
   dependencies: 
     - compile
   script:
-    - mkdir public
     - mv cv.pdf public
   artifacts:
     paths:
