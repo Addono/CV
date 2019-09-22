@@ -27,15 +27,16 @@ build-website:
     - npm ci
     - npm run build
     - npm run export
-    - cp out ../public
+    - cp -r out ../public
   artifacts:
     paths:
       - public
 
 pages:
   stage: publish
-  dependencies: 
-    - compile
+  dependencies:
+    - build-pdf
+    - build-website
   script:
     - mv cv.pdf public
   artifacts:
@@ -43,3 +44,4 @@ pages:
       - public
   only:
     - master
+
