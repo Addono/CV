@@ -1,0 +1,44 @@
+{
+  "name": "cv.aknapen.nl",
+  "version": "1.0.0",
+  "description": "Website for cv.aknapen.nl",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Addono/CV.git"
+  },
+  "keywords": [
+    "cv",
+    "website"
+  ],
+  "author": "Adriaan Knapen <hi@aknapen.nl>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://gitlab.com/Addono/CV/issues"
+  },
+  "homepage": "https://gitlab.com/Addono/CV#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.4.2",
+    "next": "^9.0.6",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-pdf": "^4.1.0",
+    "react-spinners-kit": "^1.9.0",
+    "styled-components": "^4.3.2",
+    "typeface-roboto": "0.0.75",
+    "@material-ui/icons": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.5",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-pdf": "^4.0.3",
+    "typescript": "^3.6.3"
+  }
+}

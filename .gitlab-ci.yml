@@ -4,7 +4,7 @@ stages:
  - build
  - publish
 
-compile:
+build-pdf:
   image: raabf/latex-versions:texlive2018
   stage: build
   tags:
@@ -16,6 +16,21 @@ compile:
   artifacts:
     paths:
       - ./cv.pdf
+
+build-website:
+  image: node:12-slim
+  stage: build
+  tags:
+    - docker
+  script:
+    - cd website
+    - npm ci
+    - npm run build
+    - npm run export
+    - cp out ../public
+  artifacts:
+    paths:
+      - public
 
 pages:
   stage: publish
