@@ -189,7 +189,7 @@
         \vspace{2mm}
     {\Huge\color{pblue}\cvname}
     
-    \vspace{2mm}
+    \vspace{0mm} % The space between the name and job title
 
     %------------------------------------------------
     
@@ -203,7 +203,7 @@
 
     %------------------------------------------------
     
-    \vspace{0mm}
+    \vspace{0mm} % The space between job title and contact details
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
@@ -254,8 +254,10 @@
     \end{tabular}
 
     %------------------------------------------------
-    % \vspace{4mm}
+    \vspace{-1mm} % The space between the contact methods and Skills
     \profilesection{Skills}{3cm}
+    
+    \vspace{-2mm}
     
     % {\large \textbf{Overview}}
 
@@ -263,13 +265,13 @@
         
         %------------------------------------------------
         
-        \vspace{3mm}
+        \vspace{-3mm}
        
 % 	 {\large \textbf{Programming}} 
 
 		 \programming
          
-        \vspace{4mm}
+        \vspace{2mm}
         \profilesection{Projects}{3cm} 
         
         \projects
