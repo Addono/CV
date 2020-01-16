@@ -30,10 +30,6 @@
 
 \RequirePackage[hidelinks]{hyperref}
 \hypersetup{
-    pdftitle={},
-    pdfauthor={},
-    pdfsubject={},
-    pdfkeywords={},
     colorlinks=false,           % no link border color
     allbordercolors=white       % white border color for all
 }
