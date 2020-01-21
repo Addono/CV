@@ -152,7 +152,7 @@
 \newcommand\programming[1]{ 
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
-        	\node [above right] at (0, 4) {$0$~~~$\: \arrow{3.2} \:$~~~$240+ \: $hours};
+        	\node [above right] at (0, 4) {$0$~~~$\: \arrow{3.2} \:$~~~$360+ \: $hours};
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
 				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
