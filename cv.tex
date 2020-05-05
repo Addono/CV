@@ -52,34 +52,56 @@
     {TS ~\textbullet~ Python ~\textbullet~ PHP ~\textbullet~ HTML5~\textbullet~SQL / 6}}% LaTeX
 
 % Projects text
+% \project{url}{name}{description}{technologies}
+\newcommand{\project}[4]{\textbf{\href{#1}{#2}} - {#3} \emph{#4}}
 \projects{
-        \textbf{\href{https://gitlab.com/ioteknikringen/teknifront}{TekniLight}} - Full product IoT indoor lighting project. \emph{\#TS \#React \#Python \#CD}
+        \project
+            {https://gitlab.com/ioteknikringen/teknifront}
+            {TekniLight}
+            {Full product IoT indoor lighting project.}
+            {\#TS \#React \#Python \#CD}
 
-        \textbf{\href{https://gitlab.com/Addono/CV}{This Curriculum Vitae}} - Automatically deploys the latest version to\\ \href{https://cv.aknapen.nl}{\texttt{cv.aknapen.nl}}. \emph{\#LaTeX \#GitlabCI} 
+        \project
+            {https://gitlab.com/Addono/CV}
+            {This Curriculum Vitae}
+            {Automatically deploys the latest version to\\ \href{https://cv.aknapen.nl}{\texttt{cv.aknapen.nl}}.}
+            {\#LaTeX \#GitlabCI}
 
-        \textbf{\href{https://gitlab.com/Addono/django-kubernetes-devops}{Django Kubernetes DevOps}} -
-        Demo on how to integrate AutoDevOps with Django.
-        \emph{\#Django \#Kubernetes \#GitlabCI}
+        \project
+            {https://gitlab.com/Addono/django-kubernetes-devops}
+            {Django Kubernetes DevOps}
+            {Demo on how to integrate AutoDevOps with Django.}
+            {\#Django \#Kubernetes \#GitlabCI}
 
-        \textbf{\href{https://aknapen.nl/masga}{Make Sauna Great Again}} -
-        Making sauna sensor data actionable @ \href{https://hackjunction.com}{Junction 2018}. 
-        \emph{\#Python \#Serverless \#GoogleCloud}
+        \project
+            {https://aknapen.nl/masga}
+            {Make Sauna Great Again}
+            {Making sauna sensor data actionable @ \href{https://hackjunction.com}{Junction 2018}.}
+            {\#Python \#Serverless \#GoogleCloud}
         
-        \textbf{\href{https://foodathon.github.io}{Foodathon Solutions Market}} - 
-        A \\hackton platform for an e-conference.
-        \emph{\#Python \#Django \#CICD \#PostgreSQL}
+        \project
+            {https://foodathon.github.io}
+            {Foodathon Solutions Market}
+            {A \\hackton platform for an e-conference.}
+            {\#Python \#Django \#CICD \#PostgreSQL}
 		
-		\textbf{\href{https://github.com/Addono/lisa}{Lisa}} -  
-		A web application to track expenses. 
-		\emph{\#PHP \#JS \#MySQL \#HTML5}
+		\project
+    		{https://github.com/Addono/lisa}
+    		{Lisa}
+    		{A web application to track expenses.}
+    		{\#PHP \#JS \#MySQL \#HTML5}
 		
-		\textbf{\href{https://github.com/akbokha/fhttp}{fhttp}} - 
-		A user friendly tool for employing man-in-the-middle attacks.
-		\emph{\#Python}
+		\project
+    		{https://github.com/akbokha/fhttp}
+    		{fhttp} 
+    		{A user friendly tool for employing man-in-the-middle attacks.}
+    		{\#Python}
 		
-        \textbf{\href{https://github.com/Addono/Simple-logbook}{LaTeX Logbook Manager}} - 
-        A \LaTeX\space package to track, display and present the time you spend. 
-        \emph{\#LaTeX}
+        \project
+            {https://github.com/Addono/Simple-logbook}
+            {LaTeX Logbook Manager} 
+            {A \LaTeX\space package to track, display and present the time you spend.}
+            {\#LaTeX}
 }
 
 %----------------------------------------------------------------------------------------
