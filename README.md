@@ -11,6 +11,10 @@ There's also a little bit to gain for desktop users, as we do now control routin
 
 The website can be found in the subdirectory `website` and is automatically deployed to Gitlab Pages together with the CV, if you decide to use that as your deployment option.
 
+### Analytics
+
+The website supports the GPDR complient user analytics tool [GoatCounter](https://goatcounter.com/), this will automatically be enabled if you set the `GOATCOUNTER_CODE` environment variable to the name of your GoatCounter instance, e.g. I am using `addono-cv`. If you use Gitlab CI for deployment, then add the `GOATCOUNTER_CODE` under "Settings" > "CI / CD" > "Variables" and it will automatically be picked up in your next deployment.
+
 ## License
 
 The original template used for this project is released under the Apache License 2.0 by Harshavardhan Gadgil. The website accompanying this CV is build by Adriaan Knapen and released separately under the MIT license.
