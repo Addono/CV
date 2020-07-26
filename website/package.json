@@ -24,21 +24,21 @@
   },
   "homepage": "https://gitlab.com/Addono/CV#readme",
   "dependencies": {
-    "@material-ui/core": "^4.9.5",
+    "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "next": "^9.4.4",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-pdf": "^4.1.0",
     "react-spinners-kit": "^1.9.1",
     "styled-components": "^4.4.1",
     "typeface-roboto": "0.0.75"
   },
   "devDependencies": {
-    "@types/node": "^13.9.1",
-    "@types/react": "^16.9.23",
-    "@types/react-dom": "^16.9.5",
-    "@types/react-pdf": "^4.0.3",
-    "typescript": "^3.8.3"
+    "@types/node": "^13.13.15",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-pdf": "^4.0.5",
+    "typescript": "^3.9.7"
   }
 }
