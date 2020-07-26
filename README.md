@@ -11,6 +11,8 @@ There's also a little bit to gain for desktop users, as we do now control routin
 
 The website can be found in the subdirectory `website` and is automatically deployed to Gitlab Pages together with the CV, if you decide to use that as your deployment option.
 
+URLs and other personal details are still hardcoded, hence if you decide to reuse the website you would need to manually change them in `website/pages/index.tsx`.
+
 ### Analytics
 
 The website supports the GPDR complient user analytics tool [GoatCounter](https://goatcounter.com/), this will automatically be enabled if you set the `GOATCOUNTER_CODE` environment variable to the name of your GoatCounter instance, e.g. I am using `addono-cv`. If you use Gitlab CI for deployment, then add the `GOATCOUNTER_CODE` under "Settings" > "CI / CD" > "Variables" and it will automatically be picked up in your next deployment.
