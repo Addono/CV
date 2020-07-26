@@ -5,10 +5,11 @@ import { Button, Card, CardActions, CardContent, Container, Typography } from "@
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
-const pdfLocation = "https://cv.aknapen.nl/cv.pdf";
+const pdfUrl = "https://cv.aknapen.nl/cv.pdf";
+const linkedinUrl = "https://linkedin.com/in/adriaan-knapen";
 
 const Home: React.FC = () => (
-    <object data={pdfLocation} type="application/pdf" style={{ float: 'left', width: '100%', height: '100vh' }}>
+    <object data={pdfUrl} type="application/pdf" style={{ float: 'left', width: '100%', height: '100vh' }}>
         <ResumeFormatSelector />
     </object>
 )
@@ -26,10 +27,10 @@ const ResumeFormatSelector: React.FC = () => (
             </CardContent>
             <CardActions>
                 <Container>
-                    <a href={pdfLocation} target="_blank" rel="noopener noreferrer">
+                    <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
                         <Button size={"large"}>As PDF <PictureAsPdfIcon /></Button>
                     </a>
-                    <a href={"https://linkedin.com/in/adriaan-knapen"}>
+                    <a href={linkedinUrl}>
                         <Button size={"large"}>On LinkedIn <LinkedInIcon /></Button>
                     </a>
                 </Container>
