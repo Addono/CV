@@ -46,6 +46,7 @@ jobs:
           root_file: cv.tex
           # Extra arguments to be passed to the latex compiler
           args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -xelatex -f
+          extra_system_packages: fonts-font-awesome
           
       # Build website
       - name: Setup Node.js environment
