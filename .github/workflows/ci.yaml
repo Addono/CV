@@ -50,9 +50,7 @@ jobs:
           
       # Build website
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3.6.0
-        with:
-          cache: npm
+        uses: actions/setup-node@v3.6.0        
       
       - name: Install Node.js dependencies
         run: npm ci
