@@ -45,7 +45,7 @@ jobs:
           # The root LaTeX file to be compiled
           root_file: cv.tex
           # Extra arguments to be passed to the latex compiler
-          args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -xelatex
+          args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -xelatex -f
           
       # Build website
       - name: Setup Node.js environment
