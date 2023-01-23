@@ -20,6 +20,9 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: true
+  
+env:
+  GOATCOUNTER_CODE: addono-cv
 
 jobs:
   # Build job
@@ -55,6 +58,8 @@ jobs:
         
       - name: Build website
         run: npm run build && npm run export
+        env:
+          GOATCOUNTER_CODE: ${{ env.GOATCOUNTER_CODE }}
       
       # Combine and upload
       - name: Combine PDF and website into Tar
