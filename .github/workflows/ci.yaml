@@ -56,20 +56,22 @@ jobs:
       
       - name: Install Node.js dependencies
         run: npm ci
+        working-directory: website
         
       - name: Build website
         run: npm run build && npm run export
+        working-directory: website
         env:
           GOATCOUNTER_CODE: ${{ env.GOATCOUNTER_CODE }}
       
       # Combine and upload
-      - name: Combine PDF and website into Tar
-        run: cp ./cv.pdf ./out
+      - name: Combine PDF and website
+        run: cp ./cv.pdf ./website/out
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./out
+          path: ./website/out
         
 
   # Deployment job
