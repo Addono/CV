@@ -182,7 +182,7 @@
 
     %------------------------------------------------
     
-        \vspace{2mm}
+        \vspace{1.5mm}
     {\Huge\color{pblue}\cvname}
     
     \vspace{0mm} % The space between the name and job title
