@@ -16,17 +16,14 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-  
 env:
   GOATCOUNTER_CODE: addono-cv
 
 jobs:
   # Build job
   build:
+    # Unique concurrency group for each branch or PR
+    concurrency: build-${{ github.head_ref }}
     runs-on: ubuntu-latest
     
     steps:
@@ -74,6 +71,10 @@ jobs:
 
   # Deployment job
   deploy:
+    # This job should only run on master
+    if: github.ref == 'refs/heads/master'
+    # Unique concurrency group for master branch
+    concurrency: deploy-master
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
