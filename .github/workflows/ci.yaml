@@ -55,7 +55,7 @@ jobs:
         working-directory: website
         
       - name: Build website
-        run: yarn run build && yarn run export
+        run: yarn run build
         working-directory: website
         env:
           GOATCOUNTER_CODE: ${{ env.GOATCOUNTER_CODE }}
