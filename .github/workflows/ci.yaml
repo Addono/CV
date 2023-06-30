@@ -48,13 +48,14 @@ jobs:
         uses: actions/setup-node@v3.6.0
         with:
           node-version-file: website/.nvmrc
+          cache: yarn
       
       - name: Install Node.js dependencies
-        run: npm ci
+        run: yarn install --immutable
         working-directory: website
         
       - name: Build website
-        run: npm run build && npm run export
+        run: yarn run build && yarn run export
         working-directory: website
         env:
           GOATCOUNTER_CODE: ${{ env.GOATCOUNTER_CODE }}
