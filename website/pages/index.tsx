@@ -33,8 +33,9 @@ const ResumeFormatSelector: React.FC = () => (
           CV Adriaan Knapen
         </Typography>
         <Typography variant="body2" component={"p"}>
-          Probably you're on a mobile device, so you will have to tell me how
-          you want to display my CV.
+          Smal device detected, so rendering the CV as a PDF is probably not the
+          best experience. But you can still download it as a PDF or view it on
+          LinkedIn. Your pick:
         </Typography>
       </CardContent>
       <CardActions>
