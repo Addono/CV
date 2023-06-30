@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/Addono/CV.git"
+    "url": "git+https://github.com/Addono/CV.git"
   },
   "keywords": [
     "cv",
@@ -20,9 +20,9 @@
   "author": "Adriaan Knapen <hi@aknapen.nl>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://gitlab.com/Addono/CV/issues"
+    "url": "https://github.com/Addono/CV/issues"
   },
-  "homepage": "https://gitlab.com/Addono/CV#readme",
+  "homepage": "https://github.com/Addono/CV#readme",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
