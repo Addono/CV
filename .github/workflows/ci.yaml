@@ -49,6 +49,7 @@ jobs:
         with:
           node-version-file: website/.nvmrc
           cache: yarn
+          cache-dependency-path: website/yarn.lock
       
       - name: Install Node.js dependencies
         run: yarn install --immutable
