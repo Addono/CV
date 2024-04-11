@@ -1,430 +1,322 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Twenty Seconds Resume/CV
-% LaTeX Template
-% Version 1.0 (14/7/16)
-%
-% Original author:
-% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
-% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
-%
-% License:
-% The MIT License (see included LICENSE file)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This document uses a template created by Yousef, available at https://www.overleaf.com/latex/templates/modern-simple-ats-friendly-latex-cv/fqxnznxhvdgp
+% Licensed under Creative Commons CC BY 4.0.
+% The following changes are made:
+% - Template content is replaced with personalised content
+% - Several sections have been removed or added
+% - Code has been restyled, which caused minor spacing changes
 
-% Suggestion
-% - Create a background with all the courses
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{black}
+\nopagenumbers{}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+\usepackage[scale=0.915]{geometry}
+\usepackage{import}
+\usepackage{multicol}
+\usepackage{import}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{needspace}
 
-%
-% Publications:
-% - A digital twin for safety and risk management: a prototype for a hydrogen high-pressure vessel | https://link.springer.com/chapter/10.1007/978-3-030-64823-7_34
-% - Digital Twin for Safety and Comfort: A Case Study of Sauna | https://ieeexplore.ieee.org/abstract/document/9254270?casa_token=yt2eROOKXzoAAAAA:dC_uTXA-RbAJluIIpqfedQtIFj5faEah0rySM-BNJJR83t0HqkENoSus-zXJyb0ccfMtEW3Vyw
-% - Chaos Engineering for Containerized Applications with Multi-Version Deployments | https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-291281 | https://www.diva-portal.org/smash/get/diva2:1535596/FULLTEXT01.pdf | https://aaltodoc.aalto.fi/bitstream/handle/123456789/103124/master_Knapen_Adriaan_2021.pdf?sequence=1
-%
+\name{Adriaan}{Knapen}
 
-\documentclass[a4paper]{twentysecondcv} % a4paper for A4
+% Custom links
+\newcommand*{\customcventry}[7][.13em]{
+\begin{tabular}{@{}l}
+{\bfseries #4} \
+{\itshape #3}
+\end{tabular}
+\hfill
+\begin{tabular}{l@{}}
+{\bfseries #5} \
+{\itshape #2}
+\end{tabular}
+\ifx&#7&%
+\else{\
+\begin{minipage}{\maincolumnwidth}%
+\small#7%
+\end{minipage}}\fi%
+\par\addvspace{#1}}
 
-\hypersetup{
-    pdfauthor={Adriaan Knapen},
-    pdftitle={Curriculum Vitae - Adriaan Knapen},
-    pdfsubject={The CV of Adriaan Knapen},
-    pdfkeywords={CV, Curriculum, Vitae, Adriaan, Knapen},
-    %pdfproducer={Latex with hyperref, or other system},
-    %pdfcreator={pdflatex, or other tool}
+\newcommand{\inlineLink}[2]{%
+    \underline{\href{#1}{#2}}%
 }
+
 
 \begin{document}
+\makecvtitle
+\vspace*{-14mm}
+\begin{center}\textbf{Software Engineer and Cloud Specialist}\end{center}
 
-% Command for printing skill overview bubbles
-\newcommand\skills{ 
-~
-	\smartdiagram[bubble diagram]{
-        \textbf{~~~~Cloud~~~~},
-	    \textbf{~~~~DevOps~~~~},
-        \textbf{Full Stack},
-        \textbf{~Security~},
-        \textbf{~~~CI/CD~~~},
-		\textbf{Containers}
-    }
-}
+\begin{center}
+    \begin{tabular}{ c c c }
+        \faMobile\enspace 
+        \href{tel:+31640410001}{+31 6 404 10001}
+        \enspace & \enspace  
+        \href{mailto:hi@aknapen.nl}{hi@aknapen.nl}
+        \enspace & \enspace
+        \faHome\enspace Helsinki, Finland / Munich, Germany
+    \end{tabular}
 
-% Programming skill bars
-\programming{
-	{C~\textbullet~R ~\textbullet~Arduino~\textbullet~Django~\textbullet~ Scala~\textbullet~Go / 1.5},
-    {JS ~\textbullet~Java~\textbullet~GraphQL~\textbullet~ Unity~\textbullet~ React / 3.5},
-    {TS ~\textbullet~ Python ~\textbullet~ PHP ~\textbullet~ HTML5~\textbullet~SQL / 6}}% LaTeX
+    \begin{tabular}{ c c c c }
+        \faLinkedin\enspace \color{blue} \href{https://www.linkedin.com/in/adriaan-knapen/}{in/adriaan-knapen} &
+        \enspace\enspace\faGithub\enspace \color{blue} \href{https://github.com/Addono}{github.com/Addono} & \enspace\enspace\faGitlab\enspace \color{blue} \href{https://gitlab.com/Addono}{gitlab.com/Addono} & \enspace\enspace\faHome\enspace \color{blue} \href{https://aknapen.nl}{aknapen.nl}
+\end{tabular}
+\end{center}
 
-% Projects text
-% \project{url}{name}{description}{technologies}
-\newcommand{\project}[4]{\textbf{\href{#1}{#2}} - {#3} \emph{#4}}
-\projects{
-        \project
-            {https://gitlab.com/ioteknikringen/teknifront}
-            {TekniLight}
-            {Full product IoT indoor lighting project.}
-            {\#TS \#React \#Python \#CD}
+\section{Profile}
+{A highly skilled and motivated Software Engineer and DevOps Consultant with a strong background in cloud computing, full-stack development, and containerization. Experienced in developing and implementing efficient CI/CD pipelines, automating deployments, and promoting DevOps best practices. A strong proponent of automation, GitOps, cloud-native, and LEAN software development. Passionate about contributing to open source projects and engaging with the tech community through public speaking and hackathons. Occasionally participates in entrepreneurial deep-tech ventures.}
 
-        \project
-            {https://gitlab.com/Addono/CV}
-            {This Curriculum Vitae}
-            {Automatically deploys the latest version to\\ \href{https://cv.aknapen.nl}{\texttt{cv.aknapen.nl}}.}
-            {\#LaTeX \#GitLabCI}
+\section{Areas of Expertise}
+{Cloud Computing - Full-Stack Development - CI/CD - Security - DevOps - Containers - Digital Twin Technology - Chaos Engineering - Distributed Systems - Public Speaking - Open Source Contribution}
 
-        \project
-            {https://populartimes-api.now.sh}
-            {Populartimes API}
-            {Public API for retrieving the ``Popular Times'' details from the Google Maps SDK.}
-            {\#Serverless \#TS}
-            
-        % \project
-        %     {https://gitlab.com/Addono/django-kubernetes-devops}
-        %     {Django Kubernetes DevOps}
-        %     {Demo on how to integrate AutoDevOps with Django.}
-        %     {\#Django \#Kubernetes \#GitlabCI}
+\section{Professional Experience}
 
-        \project
-            {https://aknapen.nl/masga}
-            {Make Sauna Great Again}
-            {Making sauna sensor data actionable @ \href{https://hackjunction.com}{Junction 2018}.}
-            {\#Python \#Serverless \#GoogleCloud}
+\customcventry{06/2019 ‐ present}
+    {{\color{blue}\href{https://eficode.com}{Eficode}}}
+    {Senior DevOps Consultant,}
+    {Helsinki, Finland}
+    {}{}
+    {
+        \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+            \item Public speaking at various tech events, sharing insights on cloud technologies, CI/CD, and the integration of AI in software development.
+                \begin{itemize}
+                    \item
+                    \inlineLink{https://www.eficode.com/events/to-the-cloud-and-beyond}{To The Cloud and Beyond}:  \inlineLink{https://www.youtube.com/watch?v=vokeBcAZYaQ}{``How to deploy Next.js''}
+                    
+                    \item 
+                    \inlineLink{https://www.thedevopsconference.com/videos?name=adriaan+knapen&topic=all&event=5}{The DevOps Conference 2023}: 
+                    \inlineLink{https://www.youtube.com/watch?v=mdWIfox5O_E}{``Oursource Your Continuous Delivery Pipeline by Deploying Straight From Source''}
+                    
+                    \item
+                    \inlineLink{https://galaxy.github.com/session/day-1-the-secret-to-writing-high-quality-code-more-efficiently}{GitHub Galaxy}: \inlineLink{https://galaxy.github.com/session/day-1-the-secret-to-writing-high-quality-code-more-efficiently}{``The Secret to Writing High-Quality Code''}
         
-        \project
-            {https://foodathon.github.io}
-            {Foodathon Solutions Market}
-            {A \\hackton platform for an e-conference.}
-            {\#Python \#Django \#CICD \#PostgreSQL}
-		
-		\project
-    		{https://github.com/Addono/lisa}
-    		{Lisa}
-    		{A web application to track expenses.}
-    		{\#PHP \#JS \#MySQL \#HTML5}
-		
-		\project
-    		{https://github.com/akbokha/fhttp}
-    		{fhttp} 
-    		{A user friendly tool for employing man-in-the-middle attacks.}
-    		{\#Python}
-		
-        \project
-            {https://github.com/Addono/Simple-logbook}
-            {LaTeX Logbook Manager} 
-            {A \LaTeX\space package to track, display and present the time you spend.}
-            {\#LaTeX}
-}
+                        \item
+                    \inlineLink{https://www.meetup.com/devops-finland/events/293742321/}{DevOps Finland August meetup}: 
+                        \inlineLink{https://gh.aknapen.nl/20230823--ai-assisted-development--devops-finland-meetup}{``Empowering Software Developers With AI-Based Coding Assistants''}    
+                \end{itemize}
+                
+            \item Contributed to the development and implementation of cutting-edge DevOps practices, significantly enhancing deployment efficiency and system reliability for clients.
 
-%----------------------------------------------------------------------------------------
-%	 PERSONAL INFORMATION
-%----------------------------------------------------------------------------------------
-% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+            \item Lead-developer at Eficode's {\inlineLink{https://www.eficode.com/cases/puro.earth}{reference customer}} Puro.earth, instrumental in building a team following the best practices of modern software development and leveraging a fully automated cloud-native and GitOps delivery strategy.
+        \end{itemize}
+    }
 
-\cvname{Adriaan Knapen} % Your name
-\cvjobtitle{Software Engineer} % Job
-% title/career
-
-\cvlinkedin{/in/adriaan-knapen}
-\cvnumberphone{\href{tel:+31640410001}{+31 6 404 10001}} % Phone number
-\cvsite{aknapen.nl} % Personal website
-\cvmail{hi@aknapen.nl} % Email address
-\cvgitlab{Addono}
-\cvgithub{Addono}
-% \profilepic{img/image_filename}
-
-%----------------------------------------------------------------------------------------
+\customcventry{01/2021 ‐ present}
+    {{\color{blue}\href{https://claimr.tools}{ClaimR B.V.}}}
+    {Founder \& CTO,}
+    {Den Bosch, Netherlands}
+    {}{}
+    {
+        \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+            \item Core architect of the {\inlineLink{https://unveiler.io}{Unveiler}} location-verification Software-as-a-Service platform for mobile devices. 
+            \item Leading the development of the ClaimR Auth Android application.
+        \end{itemize}
+    }
 
 
-\makeprofile % Print the sidebar
+\customcventry{01/2019 ‐ 12/2019}
+    {{\color{blue}\href{https://www.aalto.fi/en}{Aalto University}}}
+    {Research Assistant,}
+    {Espoo, Finland}
+    {}{}
+    {
+        \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+            \item Created a street lighting digital twin for the EIT Digital Activity \inlineLink{https://web.archive.org/web/20200805070817/https://cyphylab.chora.tu-berlin.de/gethomesafely/}{``Get Home Safely''}.
+            \item Worked on digital twin projects, including safety and risk management prototypes for high-pressure vessels and a case study of sauna comfort and safety.
+        \end{itemize}
+    }
 
-%----------------------------------------------------------------------------------------
-%	 EDUCATION
-%----------------------------------------------------------------------------------------
+\customcventry{06/2018 ‐ 09/2018}
+    {{\color{blue}\href{https://wur.nl/en}{Wageningen University}}}
+    {Freelancer,}
+    {Wageningen, The Netherlands}
+    {}{}
+    {
+        \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+            \item Designed, developed and hosted the e-conference platform \inlineLink{https://foodathon.github.io/}{Foodathon Solutions Market} for the SGD Conference.
+        \end{itemize}
+    }
+
+\customcventry{12/2016 ‐ 07/2018}
+    {{\color{blue}\href{https://www.triptic.nl/}{triptic}}}
+    {Junior Software Developer,}
+    {Eindhoven, The Netherlands}
+    {}{}
+    {
+        \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+            \item As a PHP developer of the core development team working on improving and securing \inlineLink{https://www.irisintranet.com/}{Iris Intranet}.
+        \end{itemize}
+    }
+
 \section{Education}
 
-\begin{twenty} % Environment for a list with descriptions
-    \twentyitem
-    	{Sep 2019 - }
-        {Dec 2020}
-        {Master Cloud Computing \& Services}
-        {\href{https://kth.se/en}{KTH Royal Institute of Technology}}
-        {Stockholm, Sweden}
-        {
-        \begin{itemize}
-            \item \href{https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-291281}{Thesis on chaos engineering,
-            %in container based deployments
-            graded \emph{5 / 5}.}
-            % \item Double degree program offered by \href{https://masterschool.eitdigital.eu/}{EIT Digital Master Schools}.
+\customcventry
+    {2019-2020}
+    {\color{blue}\href{https://kth.se/en}{KTH Royal Institute of Technology}}
+    {Master in Cloud Computing \& Services,}
+    {Stockholm, Sweden}
+    {}{}{} % This is a combined entry with the one from the KTH
+\customcventry{2018-2019}{\color{blue}\href{https://www.aalto.fi/en}{Aalto University}}
+{\color{white}Master in Cloud Computing \& Services}
+{Espoo, Finland}{}{}
+{
+    \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+        \item Double degree master from \inlineLink{https://eit.europa.eu/our-activities/opportunities/eit-digital-master-school}{EIT Digital Master School}.
+        \item Completed his \inlineLink{https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-291281}{thesis} on chaos engineering, focusing on container-based deployments. Graded 5/5.
+        \item Achieved a GPA of 4.67/5.
+        \item Minor in Innovation \& Entrepreneurship.
+    \end{itemize}
+}
+
+\customcventry
+    {Jul 2019}
+    {\color{blue}\href{https://www.elte.hu/en/}{ELTE}}
+    {EIT Digital Summer School: Machine Learning for Financial Data,}
+    {Budapest, Hungary}
+    {}{}
+    {
+        \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+            \item Complementary summer school to the EIT Digital Master degree.
+            \item Covers the technical and entrepreneurial challenges when embracing machine learning in FinTech.
         \end{itemize}
-        }
-    \\
-% 	\twentyitem
-%     	{Jul 2019}
-% 		{}
-%         {EIT Digital Summer School: ML for Financial Data}
-%         {\href{https://www.elte.hu/en/}{ELTE}}
-%         {Budapest, Hungary}
-%         {
-%     	}
-    \\
-	\twentyitem
-    	{Sep 2018 - }
-        {Jun 2019}
-        {Master Cloud Computing \& Services}
-        {\href{https://www.aalto.fi/en}{Aalto University}}
-        {Espoo, Finland}
-        {
-        \begin{itemize}
-            \item \emph{GPA of 4.67 / 5}.
-            \item Minor in Innovation \& Entrepreneurship.
-            % \item Double degree program offered by \href{https://masterschool.eitdigital.eu/}{EIT Digital Master Schools}.
+    }
+
+\customcventry
+    {2015-2018}
+    {\color{blue}\href{https://tue.nl/}{Eindhoven University of Technology}}
+    {Bachelor Software Science,}
+    {Eindhoven, The Netherlands}{}{}
+    {
+        \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+            \item Attained the bachelor's degree Cum Laude. 
+            \item Completed the Technology Entrepreneurship USE trajectory.
         \end{itemize}
-        }
-    \\
-	\twentyitem
-    	{Jul 2017}
-		{}
-        {Peking University Summer School International}
-        {\href{http://www.oir.pku.edu.cn/summerschool/}{Peking University}}
-        {Beijing, China}
-        {
-    	}
-    \\
-    \twentyitem
-    	{Sep 2015 - }
-        {Jun 2018}
-        {Bachelor Software Science}
-        {\href{https://tue.nl/}{Eindhoven University of Technology}}
-        {Eindhoven, The Netherlands}
-        {
-       	\begin{itemize}
-   			\item \emph{Attained the bachelor's degree Cum Laude (avg. $> 8$; thesis $> 9$)}.
-            \item Finished the \href{https://educationguide.tue.nl/programs/bachelor-college/use-learning-trajectory/technology-entrepreneurship/}{Technology Entrepreneurship USE trajectory}.
-		\end{itemize}
-    	}
-    % \\
-    % \twentyitem
-	   % {Sep 2008 -}
-	   % {Jul 2015}
-	   % {Pre-University Education (VWO)}
-	   % {\href{http://www.amersfoortseberg.nl/}{OSG De Amersfoortse Berg}}
-	   % {Amersfoort, The Netherlands}
-	   % {
-	   % }
-	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
-\end{twenty}
+    }
 
-%\section{Publications}
-%L. Antonie, H. Gadgil, G. Grewal, and K. Inwood, “Historical Data Integration - A Study of WWI Canadian Soldiers,” in 2016 IEEE 16th International Conference on Data Mining Workshops (ICDMW), pp. 186-193, IEEE, 2016. \vspace{2mm}
-
-%----------------------------------------------------------------------------------------
-%	 EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-\section{Experience}
-\begin{twentyshort} % Environment for a list with descriptions
-    \twentyitem
-    	{Jun 2019 -}
-		{Present}
-        {DevOps Consultant}
-		{\href{https://eficode.com}{Eficode}}
-        {Helsinki, Finland}
-        {
-        \\ \emph{Public speaking}
-        \begin{itemize}
-			\item
-			\href{https://www.eficode.com/events/to-the-cloud-and-beyond}{To The Cloud and Beyond}:  \href{https://www.youtube.com/watch?v=vokeBcAZYaQ}{``How to deploy Next.js''}
-			
-			\item 
-			\href{https://www.thedevopsconference.com/videos?name=adriaan+knapen&topic=all&event=5}{The DevOps Conference 2023}: 
-			\href{https://www.youtube.com/watch?v=mdWIfox5O_E}{``Oursource Your Continuous Delivery Pipeline by Deploying Straight From Source''}
-			
-			\item
-			\href{https://galaxy.github.com/session/day-1-the-secret-to-writing-high-quality-code-more-efficiently}{GitHub Galaxy: ``The Secret to Writing High-Quality Code''}
-
-                \item
-			\href{https://www.meetup.com/devops-finland/events/293742321/}{DevOps Finland August meetup: }
-                \href{https://gh.aknapen.nl/20230823--ai-assisted-development--devops-finland-meetup}{``Empowering Software Developers With AI-Based Coding Assistants''}
-			
+\customcventry
+    {Jul 2017}
+    {\color{blue}\href{http://www.oir.pku.edu.cn/summerschool/}{Peking University}}
+    {Summer School International,}
+    {Beijing, China}
+    {}{}
+    {
+        \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
+            \item Participating in 6 weeks of on-site courses exploring how China became the country it is today, examining its unique social values, historical position, and economic policies in an intercultural environment.
+            \item Educational component of the \inlineLink{nahss.nl}{Netherlands-Asia Honours Summer School}. 
         \end{itemize}
-        }
-        \\
-    \twentyitem
-    	{Jan 2019 -}
-		{Dec 2019}
-        {Research Assistant}
-		{\href{https://www.aalto.fi/en}{Aalto University}}
-        {Espoo, Finland}
-        {
-%         \begin{itemize}
-% 			\item Created a street lighting digital twin (``simulation'') for the EIT Digital Activity \href{https://cyphylab.chora.tu-berlin.de/gethomesafely/}{Get Home Safely}.
-%         \end{itemize}
-        }
-        \\
-    \twentyitem
-    	{Jun 2018 -}
-		{Sep 2018}
-        {Freelancer}
-		{\href{https://wur.nl/en}{Wageningen University}}
-        {Wageningen, The Netherlands}
-        {
-        % \begin{itemize}
-        %     \item Full stack development with Django.
-			%\item Designed, developed and hosted the e-conference platform \href{https://foodathon.github.io/}{Foodathon Solutions Market} for the SGD Conference.
-        % \end{itemize}
-        }
-        \\
-    \twentyitem
-    	{Dec 2016 -}
-		{Jul 2018}
-        {Junior Software Developer}
-		{\href{https://www.triptic.nl/}{triptic}}
-        {Eindhoven, The Netherlands}
-        {
-        % \begin{itemize}
-        %     \item Improving and securing \href{https://www.irisintranet.com/}{Iris Intranet} as a PHP developer.
-        % \end{itemize}
-        }
-%        \\
-% 	\twentyitem
-%     	{Dec 2013 -}
-% 		{Dec 2016}
-% 		{Content Manager \& Developer}
-% 		{\href{http://www.vilans.org/}{Vilans}}
-%         {Utrecht, The Netherlands}
-%         {}
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
-\end{twentyshort}
+    }
 
-%----------------------------------------------------------------------------------------
-%	 EXTRACURRICULAR ACTIVITY
-%----------------------------------------------------------------------------------------
+\section{Skills}
+{
+    \newcommand{\skilled}{\textcolor{black}{*}}
+    \newcommand{\sskilled}{\skilled\skilled}
+    \newcommand{\skilledRecent}{\textcolor{red}{*}}
+    \newcommand{\sskilledRecent}{\skilledRecent\skilledRecent}
+
+    \begin{itemize}[label=\textbullet]
+        \item {\textbf{Cloud Platforms:} Azure\sskilledRecent, AWS\skilled, GCP\skilled, Heroku\skilled, Vercel\skilled}
+        \item {\textbf{DevOps Tools:} Kubernetes\sskilledRecent, Terraform\skilledRecent, Pulumi\skilledRecent, GitHub Actions\skilledRecent, GitLab CI\skilled, Jenkins}
+        \item {\textbf{Programming:} TypeScript\skilledRecent, Bash\skilledRecent, RobotFramework\skilledRecent, Python\skilled, Java, PHP\sskilled, Go, Scala, C, R}
+        \item {\textbf{Web Development:} React\sskilled, Next.js\sskilled, Nest.js\sskilledRecent, Django\skilled, REST\sskilledRecent, OpenAPI\sskilledRecent, GraphQL\skilledRecent}
+        \item {\textbf{Databases:} PostgreSQL\sskilledRecent, Redis\skilledRecent, MySQL, MongoDB\skilled, FaunaDB\skilled, Prisma\sskilledRecent}
+        \item {\textbf{Other:} Git\sskilledRecent, Turborepo\skilledRecent, LaTeX, Serverless Architecture\skilledRecent, Digital Twin Technologies, Unity\skilled}
+    \end{itemize}
+
+    \emph{\skilledRecent/\sskilledRecent~Indicates more than 100 / 1000 hours of experience on production systems since January 2023. \\
+    \skilled/\sskilled~Indicates more than 100 / 1000 hours of experience on production systems anytime.}
+}
+
+\Needspace{3cm} % prevent breaking the header from the body
+\section{Languages}{
+    \begin{multicols}{2}
+        \begin{itemize}[label=\textbullet]
+        \item \textbf{Dutch} [Native]
+        \item \textbf{English} [Fluent]
+        \end{itemize}
+    \end{multicols}
+}
 
 \section{Extracurricular Activity}
-% Suggestion:
-% - Add the PHPConference
-%
-% Other hackathons
-% - Firehack
-% - Junction 2018, 2019
-% - StupidHack
-% - Galileo
-\begin{twenty} % Environment for a list with descriptions
-    \twentyitem
-    {Jan 2023}
-    {}
-    {\href{https://www.credly.com/badges/f2b4e861-75b4-43cd-8cb5-98835bf5a2d3/public_url}{Azure Network Engineer Associate (AZ-700)}}
-    {Microsoft}
-    {}
-    {}
+{
+
+\begin{itemize}[label=\textbullet]
+    \item Participated in numerous hackathons, including Junction 2018, 2019, and 2020, with several first-place wins.
+    \item Various professionally relevant certifications:
+        {
+        \newcommand{\certificateEntry}[4]{%
+            \item \inlineLink{#1}{#2} \hfill {\bfseries #3} \ {\itshape #4}%
+        }
+
+        \begin{itemize}
+            \certificateEntry
+            {https://www.credly.com/badges/f2b4e861-75b4-43cd-8cb5-98835bf5a2d3/public_url}
+            {Azure Network Engineer Associate (AZ-700)}
+            {Microsoft}
+            {Jan 2023}
+        
+            \certificateEntry
+            {https://www.credly.com/badges/4d91abb3-5f49-4f22-a0cc-d8d4f6841738/public_url}
+            {GitHub Actions}
+            {GitHub}
+            {Jun 2022}
+        
+            \certificateEntry
+            {https://www.credential.net/3e7c1e77-e591-40d3-88ff-67494b422cfc?key=9d07014f6e1465d00a525436cfdb53cc8b7fd70ae353b12ea668dee572d2c797}
+            {Certified Associate Cloud Engineer}
+            {Google Cloud}
+            {May 2021}
+        
+            \certificateEntry
+            {https://www.youracclaim.com/badges/deb40f91-a445-4e73-aed5-714988eefd80/}
+            {Certified SAFe 5 Agilist}
+            {Scaled Agile Inc}
+            {Feb 2021}
+        
+            \certificateEntry
+            {https://www.credly.com/badges/d9372b90-3057-4429-b61f-e8cd4c2b6615/public_url}
+            {GitLab Certified Services Engineer Professional}
+            {GitLab}
+            {Nov 2020}
+        \end{itemize}
+        }
+    \item Contributed to open source projects and utilized continuous integration and deployment practices to automate the deployment of personal projects, including this CV.
+\end{itemize}} 
+
+
+\section{Publications}{
+    \newcommand{\publicationEntry}[2]{%
+        \item {#1} [{#2}] %
+    }
+    \begin{itemize}[label=\textbullet]
+        \publicationEntry
+        {Chaos Engineering for Containerized Applications with Multi-Version Deployments}
+        {
+            \inlineLink{https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-291281}{KTH},
+            % \inlineLink{https://diva-portal.org/smash/get/diva2:1535596/FULLTEXT01.pdf}{Diva Portal}, 
+            \inlineLink{https://aaltodoc.aalto.fi/bitstream/handle/123456789/103124/master_Knapen_Adriaan_2021.pdf}{Aalto University}%
+        }
+        
+        \publicationEntry
+            {A Digital Twin for Safety and Risk Management: A Prototype for a Hydrogen High-Pressure Vessel}
+            {\inlineLink{https://link.springer.com/chapter/10.1007/978-3-030-64823-7_34}{Springer}}
     
-    \twentyitem
-    {Jun 2022}
-    {}
-    {\href{https://www.credly.com/badges/4d91abb3-5f49-4f22-a0cc-d8d4f6841738/public_url}{GitHub Actions}}
-    {GitHub}
-    {}
-    {}
-    
-    \twentyitem
-    {May 2021}
-    {}
-    {\href{https://www.credential.net/3e7c1e77-e591-40d3-88ff-67494b422cfc?key=9d07014f6e1465d00a525436cfdb53cc8b7fd70ae353b12ea668dee572d2c797}{Certified Associate Cloud Engineer}}
-    {Google Cloud}
-    {}
-    {}
+        \publicationEntry
+            {Digital Twin for Safety and Comfort: A Case Study of Sauna}
+            {\inlineLink{https://ieeexplore.ieee.org/abstract/document/9254270}{IEEE~Xplore}}
+    \end{itemize}
+}
 
-    \twentyitem
-    {Feb 2021}
-    {}
-    {\href{https://www.youracclaim.com/badges/deb40f91-a445-4e73-aed5-714988eefd80/}{Certified SAFe® 5 Agilist}}
-    {Scaled Agile Inc}
-    {}
-    {}
+% Footer with copyright attribution
+\vfill % This pushes the following text to the bottom
 
-    \twentyitem
-    {Nov 2020}
-    {}
-    {\href{https://www.credly.com/badges/d9372b90-3057-4429-b61f-e8cd4c2b6615/public_url}{GitLab Certified Services Engineer Professional}}
-    {GitLab}
-    {}
-    {}
+\footnotesize % This changes the text size to footnotesize. Replace with \scriptsize if you want it smaller.
 
-	\twentyitem
-	{2018 -}
-	{2020}
-	{Hackathon Participant}
-	{Various Hackathons}
-	{Espoo, Finland - Helsinki, Finland - South-Hampton, UK}
-	{
-	\\ \textbf{2020} 
-	    \href{https://raw.galileo.london/}{RAW.Galileo.London}, 1$^{st}$ in track ``Verified Location'';
-	    \href{https://ultrahack.org/covid-19datahack/}{Data Against COVID-19}; \href{http://hackjunction.com/}{Junction 2020}; 1$^{st}$ at the \href{https://ultrahack.org/open-bim-deephack}{Open BIM DeepHack}
-	\\ \textbf{2019} 
-        \href{https://ultrahack.org/galileoinnovationchallenge}{Galileo Innovation Challenge}, 2$^{th}$ in track ``Accuracy Matters'';
-        \href{http://hackjunction.com/}{Junction 2019};
-        StupidHack;
-        IoThon;
-        FireHack
-    \\ \textbf{2018} 
-        \href{https://hackjunction.com}{Junction 2018}, 1$^{st}$ in challenge ``Hack the Sauna''
-	}
-% 	\\
-% 	\twentyitem
-% 	{Oct 2017 -}
-% 	{Jan 2018}
-% 	{Ambassador}
-% 	{\href{https://nahss.nl/en}{Netherlands-Asia Honours Summer School}}
-% 	{The Netherlands}
-% 	{}
-	\\
-	\twentyitem
-	{Feb 2017 -}
-	{Jan 2018}
-	{Participant \& Ambassador}
-	{\href{https://nahss.nl/en}{Netherlands-Asia Honours Summer School}}
-	{The Netherlands \& Beijing, China}
-	{
-% 		\begin{itemize}
-% 			\item Consultancy case for Trouw Nutrition (part of SHV~Holdings) on the reduction of \emph{antibiotic growth promoters} (AGP) in the feed additives industry.
-% 			\item Multiple workshops related to group work, self development and Chinese business culture.
-% 		\end{itemize}
-	}
-	\\
-	\twentyitem
-	{Aug 2015 -}
-	{Jul 2018}
-	{Scouts Leader}
-	{\href{https://www.impeesa.nl/}{Scouting Impeesa}}
-	{Amersfoort, The Netherlands}
-	{}
-	\\
-% 	\twentyitem
-% 	{2013}
-% 	{}
-% 	{Pupil}
-% 	{\href{https://u-talent.nl/}{U-Talent}}
-% 	{Utrecht, The Netherlands}
-% 	{
-% 		\begin{itemize}
-% 			\item Attended the ``U-Talent dagen'' at Utrecht University.
-% 		\end{itemize}
-% 	}
-% 	\\
-% 	\twentyitem
-% 	{2013}
-% 	{}
-% 	{Programmer \& Graphical Designer}
-% 	{Creative Game Challenge}
-% 	{Utrecht, The Netherlands}
-% 	{
-% 		\begin{itemize}
-% 			\item Finished in the last phase as a finalist.
-% 		\end{itemize}
-% 	}
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
-\end{twenty}
+\begin{minipage}{\textwidth}
+This LaTeX document is \inlineLink{https://github.com/addono/cv}{source-available} and is a derivative work based on a template designed by Yousef, available under the \inlineLink{https://creativecommons.org/licenses/by/4.0/}{Creative Commons CC BY 4.0 License}. Modifications from the \inlineLink{https://www.overleaf.com/latex/templates/modern-simple-ats-friendly-latex-cv/fqxnznxhvdgp}{original source} were made for the purposes of this document.
+\end{minipage}
 
-\end{document} 
+\end{document} % Actually end the document
