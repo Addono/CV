@@ -180,8 +180,8 @@
     {}{}
     {
         \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
-            \item Complementary summer school to the EIT Digital Master degree.
-            \item Covers the technical and entrepreneurial challenges when embracing machine learning in FinTech.
+            % \item Complementary summer school to the EIT Digital Master degree.
+            % \item Covers the technical and entrepreneurial challenges when embracing machine learning in FinTech.
         \end{itemize}
     }
 
@@ -193,7 +193,7 @@
     {
         \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
             \item Attained the bachelor's degree Cum Laude. 
-            \item Completed the Technology Entrepreneurship USE trajectory.
+            % \item Completed the Technology Entrepreneurship USE trajectory.
         \end{itemize}
     }
 
@@ -205,16 +205,16 @@
     {}{}
     {
         \begin{itemize}[leftmargin=0.6cm, label={\textbullet}]
-            \item Participating in 6 weeks of on-site courses exploring how China became the country it is today, examining its unique social values, historical position, and economic policies in an intercultural environment.
-            \item Educational component of the \inlineLink{nahss.nl}{Netherlands-Asia Honours Summer School}. 
+            % \item Participating in 6 weeks of on-site courses exploring how China became the country it is today, examining its unique social values, historical position, and economic policies in an intercultural environment.
+            % \item Educational component of the \inlineLink{nahss.nl}{Netherlands-Asia Honours Summer School}. 
         \end{itemize}
     }
 
 \section{Skills}
 {
-    \newcommand{\skilled}{\textcolor{black}{*}}
+    \newcommand{\skilled}{\textcolor{black}{$^\star$}}
     \newcommand{\sskilled}{\skilled\skilled}
-    \newcommand{\skilledRecent}{\textcolor{red}{*}}
+    \newcommand{\skilledRecent}{\textcolor{red}{$^*$}}
     \newcommand{\sskilledRecent}{\skilledRecent\skilledRecent}
 
     \begin{itemize}[label=\textbullet]
@@ -225,9 +225,18 @@
         \item {\textbf{Databases:} PostgreSQL\sskilledRecent, Redis\skilledRecent, MySQL, MongoDB\skilled, FaunaDB\skilled, Prisma\sskilledRecent}
         \item {\textbf{Other:} Git\sskilledRecent, Turborepo\skilledRecent, LaTeX, Serverless Architecture\skilledRecent, Digital Twin Technologies, Unity\skilled}
     \end{itemize}
-
-    \emph{\skilledRecent/\sskilledRecent~Indicates more than 100 / 1000 hours of experience on production systems since January 2023. \\
-    \skilled/\sskilled~Indicates more than 100 / 1000 hours of experience on production systems anytime.}
+%
+    {\footnotesize%
+        \vspace{-2mm}%
+        \emph{%
+            \hspace*{4mm}\skilledRecent / \sskilledRecent~Indicates more than 100 / 1000 hours of experience on production systems since January 2023.
+        } \\
+        \emph{%
+            \hspace*{4mm}\skilled / \sskilled~Indicates more than 100 / 1000 hours of experience on production systems anytime.}
+        }
+        
+    }
+    
 }
 
 \Needspace{3cm} % prevent breaking the header from the body
@@ -283,7 +292,7 @@
             {Nov 2020}
         \end{itemize}
         }
-    \item Contributed to open source projects and utilized continuous integration and deployment practices to automate the deployment of personal projects, including this CV.
+    \item Contributed to open source projects and utilized continuous integration and deployment practices to automate the deployment of personal projects, including \inlineLink{https://github.com/addono/cv}{this CV}.
 \end{itemize}} 
 
 
@@ -294,7 +303,7 @@
     \begin{itemize}[label=\textbullet]
         \publicationEntry
         {Chaos Engineering for Containerized Applications with Multi-Version Deployments}
-        {
+        {%
             \inlineLink{https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-291281}{KTH},
             % \inlineLink{https://diva-portal.org/smash/get/diva2:1535596/FULLTEXT01.pdf}{Diva Portal}, 
             \inlineLink{https://aaltodoc.aalto.fi/bitstream/handle/123456789/103124/master_Knapen_Adriaan_2021.pdf}{Aalto University}%
@@ -313,10 +322,10 @@
 % Footer with copyright attribution
 \vfill % This pushes the following text to the bottom
 
-\footnotesize % This changes the text size to footnotesize. Replace with \scriptsize if you want it smaller.
+\footnotesize % Change the text size to footnotesize
 
 \begin{minipage}{\textwidth}
-This LaTeX document is \inlineLink{https://github.com/addono/cv}{source-available} and is a derivative work based on a template designed by Yousef, available under the \inlineLink{https://creativecommons.org/licenses/by/4.0/}{Creative Commons CC BY 4.0 License}. Modifications from the \inlineLink{https://www.overleaf.com/latex/templates/modern-simple-ats-friendly-latex-cv/fqxnznxhvdgp}{original source} were made for the purposes of this document.
+The source of this document is \inlineLink{https://github.com/addono/cv}{source-available} and is a derivative work based on a template designed by Yousef, available under the \inlineLink{https://creativecommons.org/licenses/by/4.0/}{Creative Commons CC BY 4.0 License}. Modifications from the \inlineLink{https://www.overleaf.com/latex/templates/modern-simple-ats-friendly-latex-cv/fqxnznxhvdgp}{original source} were made for the purposes of this document.
 \end{minipage}
 
 \end{document} % Actually end the document
