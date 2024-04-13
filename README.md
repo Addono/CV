@@ -20,5 +20,5 @@ The website supports the GPDR complient user analytics tool [GoatCounter](https:
 
 ## License
 
-The original template used for this project is released under the Apache License 2.0 by Harshavardhan Gadgil. The website accompanying this CV is build by Adriaan Knapen and released separately under the MIT license.
+The license for all LaTeX templates used in this project are found at the start of each source file. The website accompanying this CV is build by Adriaan Knapen and released separately under the MIT license.
 
