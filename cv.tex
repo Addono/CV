@@ -7,22 +7,39 @@
 
 
 \documentclass[11pt,a4paper,sans]{moderncv}
-\moderncvstyle{banking}
 \moderncvcolor{black}
-\nopagenumbers{}
+
+% moderncv themes
+\moderncvtheme[blue]{casual}
+
+% character encoding
 \usepackage[utf8]{inputenc}
+
+% adjust the page margins
+% \usepackage[scale=0.8]{geometry}
+\usepackage[scale=0.92]{geometry}
+
+\recomputelengths
+
+\nopagenumbers{}
+
+% personal data
+\name{Adriaan}{Knapen}
+\photo[60pt][0.4pt]{img/profile.png}
+
+% \homepage{aknapen.nl}
+% \phone{+31 6 404 10001}
+% \address{Helsinki, Finland | Munich, Germany}
+% \email{hi@aknapen.nl}
+
 \usepackage{ragged2e}
-\usepackage[scale=0.915]{geometry}
 \usepackage{import}
 \usepackage{multicol}
 \usepackage{import}
 \usepackage{enumitem}
-\usepackage[utf8]{inputenc}
 \usepackage{amssymb}
 \usepackage{needspace}
 
-\name{Adriaan}{Knapen}
-\photo[64pt]{https://aknapen.nl/img/profile.jpg}
 
 % Custom links
 \newcommand*{\customcventry}[7][.13em]{
@@ -48,8 +65,11 @@
 
 
 \begin{document}
+
 \makecvtitle
-\vspace*{-14mm}
+
+
+\vspace*{-18mm}
 \begin{center}\textbf{Software Engineer and Cloud Specialist}\end{center}
 
 \begin{center}
@@ -69,10 +89,10 @@
 \end{center}
 
 \section{Profile}
-{A highly skilled and motivated Software Engineer and DevOps Consultant with a strong background in cloud computing, full-stack development, and containerization. Experienced in developing and implementing efficient CI/CD pipelines, automating deployments, and promoting DevOps best practices. A strong proponent of automation, GitOps, cloud-native, and LEAN software development. Passionate about contributing to open source projects and engaging with the tech community through public speaking and hackathons. Occasionally participates in entrepreneurial deep-tech ventures.}
+{A highly skilled and motivated Software Engineer and DevOps Consultant with a strong background in cloud computing, full-stack development, and containerization. Experienced in developing and implementing efficient CI/CD pipelines, automating deployments, and promoting DevOps best practices. A strong proponent of automation, GitOps, cloud-native, and LEAN software development. Passionate about contributing to open source projects and engaging with the tech community through public speaking and hackathons.}
 
 \section{Areas of Expertise}
-{Cloud Computing - Full-Stack Development - CI/CD - Security - DevOps - Containers - Digital Twin Technology - Chaos Engineering - Distributed Systems - Public Speaking - Open Source Contribution}
+{Cloud Computing - Full-Stack Development - DevOps - CI/CD - Security - Containers - Kubernetes - Azure -  Digital Twin Technology - Chaos Engineering - Distributed Systems - Public Speaking - Open Source Contribution}
 
 \section{Professional Experience}{
  \customcventry{06/2019 ‐ present}
