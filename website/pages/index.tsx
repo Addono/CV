@@ -15,15 +15,35 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 const pdfUrl = "https://cv.aknapen.nl/cv.pdf";
 const linkedinUrl = "https://linkedin.com/in/adriaan-knapen";
 
-const Home: React.FC = () => (
-  <object
-    data={pdfUrl}
-    type="application/pdf"
-    style={{ float: "left", width: "100%", height: "100vh" }}
-  >
+const Home: React.FC = () => {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const userAgent = typeof window.navigator === "undefined" ? "" : navigator.userAgent;
+    const mobile = Boolean(
+      userAgent.match(
+        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+      )
+    );
+    setIsMobile(mobile);
+  }, []);
+
+  return isMobile ? (
     <ResumeFormatSelector />
-  </object>
-);
+  ) : (
+    <object
+      data={pdfUrl}
+      type="application/pdf"
+      style={{
+        float: "left",
+        width: "100%",
+        height: "100vw",
+      }}
+    >
+      <ResumeFormatSelector />
+    </object>
+  );
+};
 
 const ResumeFormatSelector: React.FC = () => (
   <Container style={{ marginTop: "1em" }}>
@@ -33,9 +53,9 @@ const ResumeFormatSelector: React.FC = () => (
           CV Adriaan Knapen
         </Typography>
         <Typography variant="body2" component={"p"}>
-          Smal device detected, so rendering the CV as a PDF is probably not the
-          best experience. But you can still download it as a PDF or view it on
-          LinkedIn. Your pick:
+          Mobile device detected, so rendering the CV as a PDF is probably not
+          the best experience. But you can still download it as a PDF or view it
+          on LinkedIn. Your pick:
         </Typography>
       </CardContent>
       <CardActions>
