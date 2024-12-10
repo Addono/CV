@@ -46,28 +46,23 @@ const Home: React.FC = () => {
 };
 
 const ResumeFormatSelector: React.FC = () => (
-  <Container style={{ marginTop: "1em" }}>
+  <Container style={{ marginTop: "2em", textAlign: "center" }}>
     <Card>
       <CardContent>
-        <Typography variant={"h4"} component={"h4"}>
-          CV Adriaan Knapen
-        </Typography>
-        <Typography variant="body2" component={"p"}>
-          Mobile device detected, so rendering the CV as a PDF is probably not
-          the best experience. But you can still download it as a PDF or view it
-          on LinkedIn. Your pick:
+        <Typography variant="body1" component={"p"} style={{ marginTop: "1em" }}>
+          It looks like you're using a mobile device. For the best viewing experience, you can download my CV as a PDF or view my LinkedIn page. Choose an option below:
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions style={{ justifyContent: "center" }}>
         <Container>
-          <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
-            <Button size={"large"}>
-              As PDF <PictureAsPdfIcon />
+          <a href={pdfUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", marginBottom: "10px" }}>
+            <Button variant="contained" color="primary" size={"large"} startIcon={<PictureAsPdfIcon />} style={{ margin: ".5em"}}>
+              Download PDF
             </Button>
           </a>
-          <a href={linkedinUrl}>
-            <Button size={"large"}>
-              On LinkedIn <LinkedInIcon />
+          <a href={linkedinUrl} style={{ textDecoration: "none" }}>
+            <Button variant="contained" color="primary" size={"large"} startIcon={<LinkedInIcon />} style={{ margin: ".5em"}}>
+              View on LinkedIn
             </Button>
           </a>
         </Container>
@@ -84,17 +79,32 @@ export default () => (
         content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
       />
       <meta charSet="utf-8" />
-      <title>CV - Adriaan Knapen</title>
+      <title>Resume - Adriaan Knapen</title>
     </Head>
     <style jsx global>{`
       body {
         margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #f5f5f5;
       }
     `}</style>
     <link
       rel="stylesheet"
       href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
     />
+    <div style={{ 
+      backgroundColor: '#3f51b5', 
+      color: 'white', 
+      padding: '1em .5em', 
+      textAlign: 'center' 
+    }}>
+      <Typography variant="h3" component="h1" style={{ margin: 0 }}>
+        Resume <b>Adriaan&nbsp;Knapen</b>
+      </Typography>
+      <Typography variant="h6" component="p" style={{ marginTop: '0.5em' }}>
+        Welcome to my professional CV
+      </Typography>
+    </div>
     <Home />
   </>
 );
