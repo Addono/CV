@@ -9,7 +9,7 @@ import {
   Container,
   Typography,
 } from "@mui/material";
-import ArticleIcon from '@mui/icons-material/Article';
+import ArticleIcon from "@mui/icons-material/Article";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const pdfUrl = "https://cv.aknapen.nl/cv.pdf";
@@ -122,6 +122,9 @@ export default () => (
         color: "white",
         padding: "1em .5em",
         textAlign: "center",
+      }}
+      style={{
+        maxWidth: "unset",
       }}
     >
       <Typography variant="h3" component="h1" style={{ margin: 0 }}>
