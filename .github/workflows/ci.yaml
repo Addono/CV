@@ -75,17 +75,22 @@ jobs:
   deploy:
     # This job should only run on master
     if: github.ref == 'refs/heads/master'
+    
     # Unique concurrency group for master branch
     concurrency: deploy-master
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
-    runs-on: ubuntu-latest
-    
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+  
+    runs-on: ubuntu-latest  
     needs: build
     
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
