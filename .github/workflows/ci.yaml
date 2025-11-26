@@ -52,7 +52,7 @@ jobs:
           cache-dependency-path: website/yarn.lock
       
       - name: Install Node.js dependencies
-        run: yarn install --immutable
+        run: yarn install --frozen-lockfile
         working-directory: website
         
       - name: Build website
