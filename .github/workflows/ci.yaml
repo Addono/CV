@@ -45,7 +45,7 @@ jobs:
           
       # Build website
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3.6.0
+        uses: actions/setup-node@v6.0.0
         with:
           node-version-file: website/.nvmrc
           cache: yarn
