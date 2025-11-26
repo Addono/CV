@@ -35,7 +35,7 @@ jobs:
       
       # Build CV from Latex as PDF
       - name: LaTeX compilation
-        uses: addono/latex-action@edge
+        uses: dante-ev/latex-action@edge
         with:
           # The root LaTeX file to be compiled
           root_file: cv.tex
