@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@v3
       
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v5
       
       # Build CV from Latex as PDF
       - name: LaTeX compilation
