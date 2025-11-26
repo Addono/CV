@@ -31,7 +31,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-spinners-kit": "^1.9.1",
-    "styled-components": "^6.1.13",
+    "styled-components": "^6.1.19",
     "typeface-roboto": "^1.1.13"
   },
   "devDependencies": {
