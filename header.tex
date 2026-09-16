@@ -64,6 +64,10 @@
     \underline{\href{#1}{#2}}%
 }
 
+% Compatibility between FontAwesome 5 and 6 (faHome was renamed to faHouse in FontAwesome 6)
+\providecommand*{\faHome}{\faHouse}
+\providecommand*{\faHouse}{\faHome}
+
 
 \begin{document}
 
@@ -80,12 +84,12 @@
 		\enspace & \enspace 
 		\href{mailto:hi@aknapen.nl}{hi@aknapen.nl}
 		\enspace & \enspace 
-		\faHome\enspace Munich, Germany
+		\faHouse\enspace Munich, Germany
 	\end{tabular}
 			
 	\begin{tabular}{ c c c c }
 		\faLinkedin\enspace \color{blue} \href{https://www.linkedin.com/in/adriaan-knapen/}{in/adriaan-knapen} &
-		\enspace\enspace\faGithub\enspace \color{blue} \href{https://github.com/Addono}{github.com/Addono} & \enspace\enspace\faGitlab\enspace \color{blue} \href{https://gitlab.com/Addono}{gitlab.com/Addono} & \enspace\enspace\faHome\enspace \color{blue} \href{https://aknapen.nl}{aknapen.nl} 
+		\enspace\enspace\faGithub\enspace \color{blue} \href{https://github.com/Addono}{github.com/Addono} & \enspace\enspace\faGitlab\enspace \color{blue} \href{https://gitlab.com/Addono}{gitlab.com/Addono} & \enspace\enspace\faHouse\enspace \color{blue} \href{https://aknapen.nl}{aknapen.nl} 
 	\end{tabular}
 \end{center}
 
