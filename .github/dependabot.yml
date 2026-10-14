@@ -11,3 +11,10 @@ updates:
     directory: "/website"
     schedule:
       interval: "monthly"
+    groups:
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
